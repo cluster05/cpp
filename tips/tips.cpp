@@ -3,6 +3,26 @@
     int alpha[26] = {0}; 
 */
 
+/* 
+
+    Error Handler
+
+    int x, y;
+    cin >> x >> y;
+    try
+    {
+        if (y == 0)
+            throw "Zero devider not allowed";
+        int res = x / y;
+        cout << res;
+    }
+    catch (const char *error)
+    {
+        cout << "Error :";
+        cout << error;
+    }
+
+ */
 
 /* 
     find the diff between two number and set max
@@ -14,18 +34,15 @@
     minmax(20,10) == minmax(10,20) || true
  */
 
-
 /* 
     debug 
     #define def(x) cerr<<#x<<" is "<<x<<endl; 
     def(x);
  */
 
-
 /* 
     slinding window 
  */
-
 
 /* 
     pair<dt,dt> p;
@@ -117,7 +134,6 @@
     return bitset<40>(binary).to_ulong();
     
  */
-
 
 /* 
     test enviroment
