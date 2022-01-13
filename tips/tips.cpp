@@ -4,7 +4,6 @@
 */
 
 /*
-
       vector<int> v(26, 0);
   string s = "fhadsfsadofisadjfosa";
   for (int i = 0; i < s.size(); i++) {
@@ -178,4 +177,27 @@ int main() {
         cout<<test()<<endl;
     }
 }
+ */
+
+/*
+    string s = sting ;
+    strin p = pattarn
+ regex pat(p);
+return regex_match(s,pat);
+
+ */
+
+/*
+    pointer to array;
+    int x[10] = {1,2,3,4};
+    int *ptr = x; or int *ptr = &x[0]
+
+
+    [every pointer take same amount of memory] size of pointer independent of
+  data
+
+
+    heap memory
+      int *p = new int[5];
+  delete[] p;
  */
