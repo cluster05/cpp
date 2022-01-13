@@ -1,0 +1,169 @@
+
+pointer 
+
+int x = 10;
+int *ptr  = &x;  // here *p refrancing pointer
+cout<<*ptr // print value in pointer // de-refrancing
+
+------------------------------------------------
+
+refrance 
+[anather name for variable]
+int a = 10;
+int &r = a;
+
+a / r = [10]
+
+r++  // r = 11 , a = 11
+
+----------------------------------------------
+
+pointer to structure 
+
+struct Node node = {a,b}
+struct Node *ptr = node;
+
+to access value from ptr of node we can't do like ptr.a 
+
+[answer]
+(*ptr).a
+ptr->a
+
+----------------------------------------------
+pointer to structure [heap]
+
+struct Node *ptr = (struct Node*) malloc(sizeof(struct Node))
+
+----------------------------------------------
+
+[function]
+
+structure is grouping data
+function is grouping instruction
+
+[monolithic programming ] writing everything in single 
+[modular / processor ]  programming -> task in devided
+[oop ] - grouping of related function
+
+int function(){  // declearation of function // formal parameter
+   // elaboration of function
+
+}
+
+function() // function call // actual parameter
+
+----------------------------------------------
+parameter passing method
+
+pass by value / call by value 
+
+
+-----------------------------------
+
+call by value    (int  x) simple
+call by pointer  (int *x) *x // vai defrancing *y = *x 
+call by refrance (int &x) x  // simple 
+
+-----------------------------------------
+
+array as parameter 
+
+void function(int x[]) // pass by refrance
+{
+    change in x[10] reflet the oringinal array also
+}
+
+int x[3] = {1,2,3}
+function(x);
+
+
+********************
+
+int * / [] function(int n){
+
+    int *p;
+    p = (int *)malloc(n * sizeof(int))
+    return p;
+}
+
+int *A;
+A = function(5);
+
+---------------------------------------
+
+structure as parameter 
+
+when like                   Here is array act as pass by value 
+    pass by value     in { {} } [.]
+    pass by refrance            [.]
+    pass by pointer             [->]
+
+---------------------------------------
+
+monolithic > modular > structural >oop
+
+---------------------------------------
+Class 
+
+Scope Resolution Opration 
+
+class ClassName{ 
+    // memeber function
+    private :
+        ....
+    public :
+    ClassName(){} contructor // this->a
+    ClassName(int a,int b){} //overlaoding contructor
+
+    function(){} // facilitator
+
+    int get(){} // accessor
+    int set(){} // mutator
+
+    ~ClassName(){} // destructor
+}
+
+ClassName::ClassName(int a,int b){
+
+}
+
+ClassName::function(){
+
+}
+
+ClassName::~ClassName(){}
+
+...
+ClassName cn(10,20);
+
+-------------------------------------------------------
+
+Template  / generic >> any type of data
+generic function > Template function 
+generic classes  > Template classes
+
+template<class T>
+class Arithmatic{
+    T a;
+    T b;
+
+    Arithmatic(T a,T b){
+        this->a = a;
+        this->b = b;
+    }
+
+    add(){}
+}
+
+template<class T>
+T Arithmatic<T>::add(){
+    return a + b;
+}
+
+int main(){
+    Arithmatic<int> a(10,20)
+}
+
+
+
+
