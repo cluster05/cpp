@@ -175,20 +175,28 @@ data structure > arrangment of data
 
                               CPU
                                |
-
+                              [Heap]   --------> 
+                              [Stack]   ------->    Stack Frame / Activation Record 
   HDD storage      --->   [ program ] [ data]
 [ program ] [ data]              |
    
                             Main Memary
 
-----------------------------------------------
+Heap : 
+    Heap memeory act as resourse 
+    resourse for program / organise Memary / 
+    program cannot access heap memeory [pointer access it]
+    new create the memeory allocate memeory in heap and pointer point to it
+    Deallocate the memeory
+
+--------------------------
       [DataBase]
 
         HDD storage
 [Some representation manner]
 
 
---------------------------------------------------
+------------------------------
     [Data Warehosing]
 
 Opration Data 
@@ -196,9 +204,8 @@ Lagecy Data / historical data >
     arrangment of in array of disk 
     algorithm to analize the data >> [data mining]
 
----------------------------------------------------
+------------------------
   [Big Data]
 
 --------------------------------------------------
-
 
