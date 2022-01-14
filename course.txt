@@ -166,4 +166,39 @@ int main(){
 
 
 
+-------------------------------------------------------
+
+data > is integral part of program 
+program > set of instruction
+
+data structure > arrangment of data
+
+                              CPU
+                               |
+
+  HDD storage      --->   [ program ] [ data]
+[ program ] [ data]              |
+   
+                            Main Memary
+
+----------------------------------------------
+      [DataBase]
+
+        HDD storage
+[Some representation manner]
+
+
+--------------------------------------------------
+    [Data Warehosing]
+
+Opration Data 
+Lagecy Data / historical data > 
+    arrangment of in array of disk 
+    algorithm to analize the data >> [data mining]
+
+---------------------------------------------------
+  [Big Data]
+
+--------------------------------------------------
+
 
