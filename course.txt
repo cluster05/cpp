@@ -209,3 +209,19 @@ Lagecy Data / historical data >
 
 --------------------------------------------------
 
+Type of data structure 
+Physical > Araray / LinkedList
+Logical > [Linear] Stack / Queue / [Non Linear] Tree / Graph / [Tabular] Hash Table
+
+
+-----------------------------------------------------
+
+[ADT] Abtract Data Type
+Data Type > representation of data
+            Opration on data
+
+            int x;
+            2 byte > 16 bit
+       [ 1 bit (sign) | 15 bit (store value) ]   
+
+  
