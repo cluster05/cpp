@@ -224,4 +224,47 @@ Data Type > representation of data
             2 byte > 16 bit
        [ 1 bit (sign) | 15 bit (store value) ]   
 
-  
+
+------------------------------------------------------
+
+[Recuresion]  n+1 [Activation Record ] 
+func(){
+    Calling time 
+    func()
+    Returning time
+}
+
+[static variable in Recuresion]
+it is present in code | and created at the time of compile time
+
+
+
+func(){
+    Calling time 
+    func()   //tail Recuresion
+}
+----------
+
+func(){
+    func()   //head Recuresion
+    Calling time 
+}
+
+----------
+func(){
+    func()   //tree Recuresion
+    func()   //tree Recuresion
+}
+----------
+
+func1(){
+    func2()  // indirect Recuresion
+}
+
+func2(){
+    func1()
+}
+----------
+func(){
+    func(func())  //nested Recuresion
+}
