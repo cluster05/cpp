@@ -320,3 +320,40 @@ int **A;   //everything in heap
   A = new int*[3];
   A[0] = new int[3];
   A[1] = new int[4];
+
+-------------------------------------------------------
+[1D]
+  Array representation by compiler
+
+  A[3]  
+ [base address]   +     [calculate value]
+     L0           +     3 * sizeof(variable)  
+
+-----------------------------------
+[2D]
+[ Row Measure Mapping  ] 
+
+ [  []
+    []
+    []
+] 
+  >> convert row >> 
+ [ [] , [] , [] ]
+m,n >> row , Colum
+i,j >> find i , j
+ A[i][j] = L0 + (( ( i -1) * n )  + (j-1) ) * sizeof(variable)
+
+------------------
+ 
+[ Column Major Mapping]
+
+A[i][j] = L0 + (( ( j -1) * n )  + (i-1) ) * sizeof(variable)
+
+---------------------------------------------------------
+
+why array index start from 0 >> 
+    n location operation extra and time taken to perform Opration is greater
+
+
+---------------------------------------------------------------
+
