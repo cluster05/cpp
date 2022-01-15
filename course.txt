@@ -268,3 +268,55 @@ func2(){
 func(){
     func(func())  //nested Recuresion
 }
+
+--------------------------------------------------
+
+[Array]
+
+int arr[10]
+int arr[] ={1,2,3,4} // default length 
+int arr[10] ={0} // default all value will be 0
+int arr[10] = {1,2,3,4,0} // default all remaining element value will be 0
+
+in C >> [[size of array decide at compile time and allocate it at run time;]]
+in CPP << we can do run time 
+
+
+[create array in heap]
+[CPP] int *p  = new int[5];
+[C] int *p = (int *)malloc(s*sizeof(int));
+
+[CPP] delete []p;
+[C] free(p)
+---------------------------------------------
+[increase and descrease the size of array]
+
+int *p = new int[5];
+int *q = new int[10];
+
+for() p to q ; // memcopy >> memeory copy
+delete []p;
+
+p = q;
+p = NULL;
+
+-------------------------------------------
+
+[ why is not growing ]  >> memeory address is contigious 
+
+--------------------------------------------------------
+
+[2D Array]
+
+int A[3][4];  //everything in Stack
+int *A[3]    // ptr in stack and data in heap
+     A[0,1,2] => all ptr 
+            A[0] = new int[4];
+            A[1] = new int[4];
+        A[1][2]; 
+    
+
+int **A;   //everything in heap
+  A = new int*[3];
+  A[0] = new int[3];
+  A[1] = new int[4];
