@@ -357,3 +357,6 @@ why array index start from 0 >>
 
 ---------------------------------------------------------------
 
+[ADT] Abtract data type 
+    representation && set of Opration on data
+
