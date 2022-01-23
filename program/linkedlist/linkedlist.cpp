@@ -36,7 +36,7 @@ void display() {
     cout << temp->val << "->";
     temp = temp->next;
   }
-  cout << "NULL";
+  cout << "NULL" << endl;
 }
 
 void displayRecursive(Node *temp) {
@@ -104,6 +104,7 @@ void insert(int ele, int pos) {
   newNode->next = temp->next;
   temp->next = newNode;
 }
+
 void insertLast(int ele) {
 
   Node *temp = new Node(ele);
@@ -113,6 +114,32 @@ void insertLast(int ele) {
   }
   headCp->next = temp;
 }
+
+void reversePrint() {
+
+  Node *curr = head, *prev = NULL, *prevPrev = NULL;
+  while (curr) {
+    prevPrev = prev;
+    prev = curr;
+    curr = curr->next;
+    prev->next = prevPrev;
+  }
+  head = prev;
+}
+
+void DeleteNode(int ele) {
+
+  Node *temp = head, *prev = NULL;
+  while (temp && ele != temp->val) {
+    prev = temp;
+    temp = temp->next;
+  }
+  if (temp == NULL)
+    return;
+
+  prev->next = temp->next;
+}
+
 int main() {
   head = NULL;
   display();
@@ -120,11 +147,24 @@ int main() {
   int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   create(arr, 10);
   display();
-  cout << "\nRecursion Display : ";
+  cout << "Recursion Display : ";
   displayRecursive(head);
   NumberOfNode();
-  Search(6);
-  display();
+
   Search(10);
+  display();
+  insertLast(11);
+  display();
+  insert(1000, 1);
+  display();
+  insert(2000, 2);
+  display();
+  insert(3000, 3);
+  display();
+  DeleteNode(30);
+  display();
+  DeleteNode(10);
+  display();
+  reversePrint();
   display();
 }
