@@ -1,0 +1,83 @@
+MATRIX 
+Diagonal Matrix:
+    [
+        1 , 0 , 0 
+        0 , 1 , 0
+        0 , 0 , 1
+    ]
+
+    Efficient Method >>
+    => [1,1,1]
+
+Lower trangular Matrix:
+        
+        j
+    [
+   i    1 , 0 , 0 
+        1 , 1 , 0
+        1 , 1 , 1
+    ]
+
+    m [i , j ] = 0 if i < j
+
+    n ( n + 1 ) / 2 element are non-zero
+
+    n ^ 2 element there
+
+    n ^ 2 - n (n + 1) / 1 zero element
+
+    Efficient Method >>
+
+    [Row Measure Method] :
+
+        index [i][j] =   i ( i  - 1 ) / 2 + j -1 
+
+                    
+    [Column Measure Method] :
+
+      index [i][j] =( n(j - 1) - ( (j - 2 )(j - 1) / 2 ) ) +  ( i - j ) 
+
+       
+
+Upper trangular Matrix:
+
+    [
+        1 , 1 , 1 
+        0 , 1 , 1
+        0 , 0 , 1
+    ]
+
+    m [i , j ] = 0 if i > j
+
+
+
+    [Row Measure Method] :
+
+                      
+        index [i][j] =( n(i - 1) - ( (i - 2 )(i - 1) / 2 ) ) +  ( j - i ) 
+
+
+    [Column Measure Method] :
+
+         index [i][j] = j ( j  - 1 ) / 2 + i -1
+
+
+Symmetric Matric 
+
+    mat[i,j] = mat[j,i]
+
+    = [
+        2,2,2,2,2
+        2,3,3,3,3
+        2,3,4,4,4
+        2,3,4,5,6
+        2,3,4,5,6
+    ];
+
+    
+
+
+
+
+    
+ 
