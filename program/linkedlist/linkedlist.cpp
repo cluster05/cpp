@@ -63,6 +63,28 @@ void NumberOfNode() {
   cout << count << endl;
 }
 
+void Search(int ele) {
+  Node *temp = head, *prev = NULL;
+  if (temp == NULL) {
+    cout << "NOT FOUND" << endl;
+    return;
+  }
+  while (temp) {
+    if (temp->val == ele) {
+
+      cout << "FOUND" << endl;
+      prev->next = temp->next;
+      temp->next = head;
+      head = temp;
+      return;
+    }
+    prev = temp;
+    temp = temp->next;
+  }
+
+  cout << "NOT FOUND" << endl;
+}
+
 int main() {
   head = NULL;
   display();
@@ -73,4 +95,8 @@ int main() {
   cout << "\nRecursion Display : ";
   displayRecursive(head);
   NumberOfNode();
+  Search(6);
+  display();
+  Search(10);
+  display();
 }
