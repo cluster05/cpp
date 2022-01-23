@@ -43,7 +43,33 @@ gets(A)  string with spaces
 --------------------------------------------------------
 
 
+shift 
 
+H = 00000001 
+H = H << 2  // 00000100
 
+AND 
 
+OR 
 
+[ masking ]
+Checking bit on
+Konwing perticular bit in memory on and off [ masking ]
+    HOW  ?
+        shift and AND
+
+[ MERGING ]
+Setting bit on 
+    HOW ?
+        shift and or
+
+Anagram >> decimal , medical
+
+----------------------------------------------------
+
+Permutation 
+Backtracking 
+
+state space tree
+
+Brute force
