@@ -48,11 +48,29 @@ void displayRecursive(Node *temp) {
   displayRecursive(temp->next);
 }
 
+void NumberOfNode() {
+  Node *temp;
+  cout << "NUMBER OF NODE : ";
+  if (temp == NULL) {
+    cout << 0 << endl;
+    return;
+  }
+  int count = 0;
+  while (temp) {
+    count++;
+    temp = temp->next;
+  }
+  cout << count << endl;
+}
+
 int main() {
   head = NULL;
   display();
 
   int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   create(arr, 10);
+  display();
+  cout << "\nRecursion Display : ";
   displayRecursive(head);
+  NumberOfNode();
 }
