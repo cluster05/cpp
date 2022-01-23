@@ -1,0 +1,14 @@
+LINKED LIST:
+
+Problem with array :
+    SIZE
+
+LINKED LIST is collection of node in witch each node contain data and address of next node
+
+
+struct Node{
+    int data;
+    Node *Node // self refrancing structure
+};
+
+sizeof structure ()
