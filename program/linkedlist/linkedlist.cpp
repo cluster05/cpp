@@ -85,6 +85,34 @@ void Search(int ele) {
   cout << "NOT FOUND" << endl;
 }
 
+void insert(int ele, int pos) {
+
+  Node *temp = head;
+  if (pos == 1) {
+    Node *newNode = new Node(ele);
+    newNode->next = head;
+    head = newNode;
+    return;
+  }
+  for (int i = 1; i < pos - 1; i++) {
+    if (temp == NULL) {
+      return;
+    }
+    temp = temp->next;
+  }
+  Node *newNode = new Node(ele);
+  newNode->next = temp->next;
+  temp->next = newNode;
+}
+void insertLast(int ele) {
+
+  Node *temp = new Node(ele);
+  Node *headCp = head;
+  while (headCp->next != NULL) {
+    headCp = headCp->next;
+  }
+  headCp->next = temp;
+}
 int main() {
   head = NULL;
   display();
