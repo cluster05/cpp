@@ -2,169 +2,79 @@
 using namespace std;
 
 struct Node {
-  int val;
+  int data;
+  Node *prev;
   Node *next;
-  Node(int val) {
-    this->val = val;
+  Node(int data) {
+    this->data = data;
     next = NULL;
+    prev = NULL;
   }
 } * head;
 
-void create(int arr[], int n) {
+void create(int arr[], int size) {
 
-  Node *last, *temp;
-  for (int i = 0; i < n; i++) {
-    if (head == NULL) {
-      head = new Node(arr[i]);
-      last = head;
-    } else {
-      temp = new Node(arr[i]);
-      last->next = temp;
-      last = last->next;
-    }
+  head = new Node(arr[0]);
+  head->prev = head->next = NULL;
+
+  Node *last = head;
+  for (int i = 1; i < size; i++) {
+    Node *temp = new Node(arr[i]);
+    temp->next = last->next;
+    temp->prev = last;
+    last->next = temp;
+    last = temp;
   }
 }
 
 void display() {
   Node *temp = head;
-  if (temp == NULL) {
-    cout << "NULL" << endl;
-    return;
-  }
-  cout << "LINKED LIST : ";
+
   while (temp) {
-    cout << temp->val << "->";
+    cout << temp->data << " <-> ";
     temp = temp->next;
   }
   cout << "NULL" << endl;
 }
 
-void displayRecursive(Node *temp) {
-  if (temp == NULL) {
-    cout << "NULL" << endl;
-    return;
-  }
-  cout << temp->val << "->";
-  displayRecursive(temp->next);
-}
-
-void NumberOfNode() {
-  Node *temp;
-  cout << "NUMBER OF NODE : ";
-  if (temp == NULL) {
-    cout << 0 << endl;
-    return;
-  }
-  int count = 0;
-  while (temp) {
-    count++;
-    temp = temp->next;
-  }
-  cout << count << endl;
-}
-
-void Search(int ele) {
-  Node *temp = head, *prev = NULL;
-  if (temp == NULL) {
-    cout << "NOT FOUND" << endl;
-    return;
-  }
-  while (temp) {
-    if (temp->val == ele) {
-
-      cout << "FOUND" << endl;
-      prev->next = temp->next;
-      temp->next = head;
-      head = temp;
-      return;
-    }
-    prev = temp;
-    temp = temp->next;
-  }
-
-  cout << "NOT FOUND" << endl;
-}
-
-void insert(int ele, int pos) {
-
+void displayReverse() {
   Node *temp = head;
-  if (pos == 1) {
-    Node *newNode = new Node(ele);
-    newNode->next = head;
-    head = newNode;
-    return;
-  }
-  for (int i = 1; i < pos - 1; i++) {
-    if (temp == NULL) {
-      return;
-    }
+  while (temp->next != NULL) {
     temp = temp->next;
   }
-  Node *newNode = new Node(ele);
-  newNode->next = temp->next;
-  temp->next = newNode;
-}
-
-void insertLast(int ele) {
-
-  Node *temp = new Node(ele);
-  Node *headCp = head;
-  while (headCp->next != NULL) {
-    headCp = headCp->next;
+  while (temp != NULL) {
+    cout << temp->data << " <-> ";
+    temp = temp->prev;
   }
-  headCp->next = temp;
+  cout << "NULL" << endl;
 }
 
-void reversePrint() {
+void insertfirst(int data) {
+  Node *node = new Node(data);
+  node->prev = node->next = NULL;
 
-  Node *curr = head, *prev = NULL, *prevPrev = NULL;
-  while (curr) {
-    prevPrev = prev;
-    prev = curr;
-    curr = curr->next;
-    prev->next = prevPrev;
-  }
-  head = prev;
+  node->next = head;
+  head = node;
 }
 
-void DeleteNode(int ele) {
-
-  Node *temp = head, *prev = NULL;
-  while (temp && ele != temp->val) {
-    prev = temp;
+void insertlast(int data) {
+  Node *temp = head;
+  while (temp->next != NULL) {
     temp = temp->next;
   }
-  if (temp == NULL)
-    return;
-
-  prev->next = temp->next;
+  Node *node = new Node(data);
+  temp->next = node;
+  node->prev = temp;
 }
 
 int main() {
-  head = NULL;
-  display();
 
-  int arr[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   create(arr, 10);
   display();
-  cout << "Recursion Display : ";
-  displayRecursive(head);
-  NumberOfNode();
-
-  Search(10);
+  insertfirst(100);
   display();
-  insertLast(11);
+  insertlast(200);
   display();
-  insert(1000, 1);
-  display();
-  insert(2000, 2);
-  display();
-  insert(3000, 3);
-  display();
-  DeleteNode(30);
-  display();
-  DeleteNode(10);
-  display();
-  reversePrint();
-  display();
+  displayReverse();
 }
