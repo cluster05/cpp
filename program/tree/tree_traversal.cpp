@@ -66,6 +66,45 @@ void printGivenLevel(Node *root, int level) {
   }
 }
 
+int calculateHeight(Node *root) {
+
+  if (root == NULL)
+    return -1;
+  if (root->left == NULL && root->right == NULL)
+    return 0;
+  return 1 + max(calculateHeight(root->left), calculateHeight(root->right));
+}
+
+int NodeWithDegreeTwo(Node *root) {
+
+  int x, y;
+
+  if (root) {
+    x = NodeWithDegreeTwo(root->left);
+    y = NodeWithDegreeTwo(root->right);
+
+    if (root->left != NULL && root->right != NULL) {
+      return x + y + 1;
+    } else {
+      return x + y;
+    }
+  }
+  return 0;
+}
+
+int CountNode(Node *root) {
+
+  int x, y;
+
+  if (root) {
+
+    x = CountNode(root->left);
+    y = CountNode(root->right);
+    return x + y + 1;
+  }
+  return 0;
+}
+
 int main() {
 
   /*
@@ -93,4 +132,7 @@ int main() {
   levelWiseTravesel(root);
   cout << "\nPrint 3lvl: ";
   printGivenLevel(root, 3);
+  cout << "\nNum Node  : " << CountNode(root);
+  cout << "\nHeight    : " << calculateHeight(root);
+  cout << "\nNode 2 Deg: " << NodeWithDegreeTwo(root);
 }
