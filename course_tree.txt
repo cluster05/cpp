@@ -100,4 +100,20 @@ Max Nodes =  ( m ^ (h+1) )+ 1  /  m -1
 
 -------------------------------------------------------------------------
 
+
+Array Representation of tree 
+
+
+ele >> i  
+left child >> 2i
+right child >> 2i +1 
+
+
+Parent index = [ i  /  2 ]
     
+
+------------------------------------------------------------------------
+
+Complete Binary Tree 
+
+No left child be empty
