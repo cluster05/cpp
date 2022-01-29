@@ -32,7 +32,25 @@ Right Sckewed Binary Tree ( only right child )
 
 ---------------------------------------------------------------------
 
+Number of Binary Tree for n nodes :
+
+Cathalon Number : T (n) = (2n) C n  /  n + 1 
 
 
- 
+    N       0   1   2   3   4   5   6
 
+    T(n)    1   1   2   5   14  42  132
+
+
+    T(n) = T(1) * T (n -1 ) + ... +  T(n -1 ) * T (1) 
+
+      SUM[1-n]  T ( i - 1 ) T ( n - i )
+
+
+FOR label Node : 
+
+    T (n) = ((2n) C n  /  n + 1)  * n !
+
+Number of tree with maximum Height : 2^n
+
+    
