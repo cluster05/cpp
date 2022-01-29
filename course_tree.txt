@@ -53,4 +53,51 @@ FOR label Node :
 
 Number of tree with maximum Height : 2^n
 
+
+-------------------------------------------------------------------------
+
+Number of Maximum / Minimum nodes for Binary Tree in given height :
+
+if H = h
+
+Maximum Nodes =  h + 1 
+
+Minimum Nodes = ( 2 ^ (h+1) )  - 1 
+
+
+[INVERSE]
+
+WHAT nodes are given what is maximum and Minimum height of tree can be : 
+
+Maximum height = n - 1
+
+Minimum height = log2(n+1) - 1
+
+
+-----------------------------------------------------------------------------
+
+
+STICT Binary Tree  : Children { 0 , 2 }
+
+Minimum Number of node required to build height in STICT Binary tree
+
+Min Node  = 2h + 1
+Max Node = (2 ^ (h+1)) -1 
+
+
+Internal Nodes  + 1  = External Nodes 
+
+
+-------------------------------------------------------------------------
+
+M - ary tree { 0 ,1,2,3..M} Children
+
+Strick M -ary tree { 0 , M} Children
+
+Min Nodes = m * h + 1
+
+Max Nodes =  ( m ^ (h+1) )+ 1  /  m -1 
+
+-------------------------------------------------------------------------
+
     
