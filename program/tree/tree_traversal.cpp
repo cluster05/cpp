@@ -35,6 +35,37 @@ void inorder(Node *node) {
   inorder(node->right);
 }
 
+void levelWiseTravesel(Node *root) {
+
+  queue<Node *> q;
+
+  q.push(root);
+
+  while (!q.empty()) {
+
+    Node *temp = q.front();
+    q.pop();
+    cout << temp->data << " ";
+    if (temp->left != NULL) {
+      q.push(temp->left);
+    }
+    if (temp->right != NULL) {
+      q.push(temp->right);
+    }
+  }
+}
+
+void printGivenLevel(Node *root, int level) {
+  if (root == NULL)
+    return;
+  if (level == 1)
+    cout << root->data << " ";
+  if (level > 1) {
+    printGivenLevel(root->left, level - 1);
+    printGivenLevel(root->right, level - 1);
+  }
+}
+
 int main() {
 
   /*
@@ -58,4 +89,8 @@ int main() {
   postorder(root);
   cout << "\nInorder   : ";
   inorder(root);
+  cout << "\nLevelWise : ";
+  levelWiseTravesel(root);
+  cout << "\nPrint 3lvl: ";
+  printGivenLevel(root, 3);
 }
