@@ -92,6 +92,21 @@ int NodeWithDegreeTwo(Node *root) {
   return 0;
 }
 
+int LeafNode(Node *root) {
+
+  int x, y;
+  if (root) {
+    x = LeafNode(root->left);
+    y = LeafNode(root->right);
+    if (root->left == NULL && root->right == NULL) {
+      return 1 + x + y;
+    } else {
+      return x + y;
+    }
+  }
+  return 0;
+}
+
 int CountNode(Node *root) {
 
   int x, y;
@@ -135,4 +150,5 @@ int main() {
   cout << "\nNum Node  : " << CountNode(root);
   cout << "\nHeight    : " << calculateHeight(root);
   cout << "\nNode 2 Deg: " << NodeWithDegreeTwo(root);
+  cout << "\nLeaf Node : " << LeafNode(root);
 }
