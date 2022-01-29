@@ -1,0 +1,38 @@
+TREE : 
+
+TREE is collection of nodes where one of the node taken as ROOT node
+rest of nodes devided into collection of disjoint subset. and each subset 
+is node or tree.
+
+            A
+        /   |   \
+       B    D    C
+    /    \      /  \
+   E      F    G    H
+
+ 
+Terminology  :
+ROOT        : A
+Parent      : A < B,D,C
+Child       : 
+Siblings    : B,C,D ( Children of same Parent)
+Decendence  : A > All node  ( Node can be reach from perticular node )
+Ancesters   : All Node from that node to root node 
+Degree      : Number of Children
+Internal Node : Degree > 0  
+External Node : Degree == 0 leaf Node
+Leavel      : 1 , 2 , 3
+Height      : 0 , 1 , 2
+Forest      : when we remove root node remaing tree called Forest
+
+Binary TREE: Evary Node two or less than two node;
+
+Left Sckewed Binary Tree ( only left child )
+Right Sckewed Binary Tree ( only right child )
+
+---------------------------------------------------------------------
+
+
+
+ 
+
