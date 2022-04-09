@@ -1,0 +1,62 @@
+Encapsulation:
+Encapsulation is defined as binding together the data and the functions that manipulate them.
+Encapsulation also leads to data abstraction or hiding.
+
+    Eg : Company > sale , fainance , developer , Business
+
+Abstraction :
+Abstraction means displaying only essential information and hiding the details.
+Data abstraction refers to providing only essential information about the data
+to the outside world, hiding the background details or implementation.
+
+     Eg : Car > break > inner machanism
+
+Polymorphism :
+The word polymorphism means having many forms.
+In simple words, we can define polymorphism as the
+ability of a message to be displayed in more than one form.
+
+Eg . Person > father, a husband, an employee
+
+    Compile Time
+    operator overloading  >> Why can’t . (dot), :: , ?: and sizeof be overloaded?
+
+        Complex operator+(Complex const &obj) {
+            Complex res;
+            res.real = real + obj.real;
+            res.imag = imag + obj.imag;
+            return res;
+        }
+    function overloading  >>
+        void func(int x){
+
+        }
+        void func(double x){
+
+        }
+
+
+    Run Time
+    Virtaul Funtion
+        Parent *ptr, p;
+        Children c;
+        ptr = &p;
+        ptr->function();
+        ptr = &c;
+        ptr->function();
+
+    Pure Virtual Fuction
+          virtual void GetName() = 0;
+
+Inheritance:
+The capability of a class to derive properties and
+characteristics from another class is called Inheritance.
+Inheritance is one of the most important features of Object-Oriented Programming.
+
+Example: Dog, Cat, Cow can be Derived Class of Animal Base Class.
+
+Dynamic Binding:
+In dynamic binding, the code to be executed in response
+to function call is decided at runtime.
+
+    virtual functions

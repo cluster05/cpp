@@ -96,6 +96,12 @@
     string s = to_string(i);
  */
 
+// clock_t tStart = clock();
+// const auto processor_count = thread::hardware_concurrency();
+// cout << processor_count << endl;
+
+// printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
+
 /*
     form number of size k from array;
     for(int i =0 ; i < k ; i++) num = num * 10 + arr[i]
